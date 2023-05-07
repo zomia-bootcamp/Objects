@@ -59,7 +59,7 @@ let spaceship = {
 ```
 The `spaceship` object has two properties `Fuel Type` and `color`. `'Fuel Type'` has quotation marks because it contains a space character.
 ### Exercises
-Open [./exersises/fasterSpaceship.js](./exersises/fasterSpaceship.js) and follow the instructions.
+Open [./exercises/fasterSpaceship.js](./exercises/fasterSpaceship.js) and follow the instructions.
 
 ## Accessing Properties
 There are two ways we can access an object’s property. Let’s explore the first way— dot notation, `.`.
@@ -87,7 +87,7 @@ spaceship.favoriteIcecream; // Returns undefined
 Let’s get some more practice using dot notation on an object!
 
 ### Exercises
-Open [./exersises/countTheCrew.js](./exersises/countTheCrew.js) and follow the instructions.
+Open [./exercises/countTheCrew.js](./exercises/countTheCrew.js) and follow the instructions.
 
 ## Bracket Notation
 The second way to access a key’s value is by using bracket notation, `[ ]`.
@@ -125,7 +125,7 @@ returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth'
 If we tried to write our `returnAnyProp()` function with dot notation (objectName.propName) the computer would look for a #key# of `'propName'` on our object and not the #value# of the `propName` parameter.
 
 ### Exercises
-Open [./exersises/secretMission.js](./exersises/secretMission.js) and follow the instructions.
+Open [./exercises/secretMission.js](./exercises/secretMission.js) and follow the instructions.
 
 ## Property Assignment
 Once we’ve defined an object, we’re not stuck with all the properties we wrote. Objects are mutable meaning we can update them after we create them!
@@ -161,7 +161,7 @@ delete spaceship.mission;  // Removes the mission property
 ```
 
 ### Exercises
-Open [./exersises/spaceshipUpgrade.js](./exersises/spaceshipUpgrade.js) and follow the instructions.
+Open [./exercises/spaceshipUpgrade.js](./exercises/spaceshipUpgrade.js) and follow the instructions.
 
 
 
