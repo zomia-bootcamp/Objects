@@ -6,7 +6,7 @@ of crew roles and names in the following format:
 2. Using for...in, iterate through the spaceship.crew object in the code editor and console.log() a list of 
 crew names and degrees in the following format: 
 '[crew member's name]: [crew member's degree]', i.e.,'Lily: Computer Engineering'.
-
+*/
 
 
 let spaceship = {
