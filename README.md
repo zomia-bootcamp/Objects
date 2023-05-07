@@ -59,5 +59,6 @@ let spaceship = {
 ```
 The `spaceship` object has two properties `Fuel Type` and `color`. `'Fuel Type'` has quotation marks because it contains a space character.
 ### exercises
+Open [exersises/fasterSpaceship.js](exersises/fasterSpaceship.js) and follow the instructions.
 
 
