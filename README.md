@@ -2,10 +2,10 @@
 
 ## Objectives
 
-- Implement real-world entities models with JavaScript objects.
-- Contrast the definitions of "property" and "method".
-- Manipulate object propeties
-- Access objects by reference
+- Implement models of real-world entities using JavaScript objects.
+- Differentiate between "property" and "method" definitions.
+- Modify object properties.
+- Access objects by reference.
 
 ## Preparation
 
@@ -15,12 +15,13 @@
 1. Checkout to the `training` branch.
 1. Install dependencies with `npm install`.
 
-## Introduction
-It’s time to learn more about the basic structure that permeates nearly every aspect of JavaScript programming: objects.
+### Introduction
 
-You’re probably already more comfortable with objects than you think, because JavaScript loves objects! Many components of the language are actually objects under the hood, and even the parts that aren’t— like strings or numbers— can still act like objects in some instances.
+It is time to delve deeper into the fundamental structure that underlies almost every aspect of JavaScript programming: objects.
 
-There are only seven fundamental data types in JavaScript, and six of those are the primitive data types: 
+You might already be more familiar with objects than you think, as JavaScript embraces them. Many components of the language are actually objects internally, and even those that are not, like strings or numbers, can still exhibit object-like behavior in certain situations.
+
+JavaScript has only seven fundamental data types, with six of them being primitive data types:
 - string
 - number
 - boolean
@@ -28,13 +29,11 @@ There are only seven fundamental data types in JavaScript, and six of those are 
 - undefined
 - symbol
 
-With the seventh type, objects, we open our code to more complex possibilities. 
-We can use JavaScript objects to model real-world things, like a basketball, a dog, or we can use objects to build the data structures that make the web possible.
-
+With the seventh type, objects, we unlock more complex possibilities in our code. JavaScript objects can be used to represent real-world entities such as a basketball or a dog, or they can be used to construct the data structures that power the web.
 
 ![dog objects](https://www.atnyla.com/library/images-tutorials/class-and-object-in-java-6.PNG)
 
-At their core, JavaScript objects are containers storing related data and functionality, but that deceptively simple task is extremely powerful in practice. You’ve been using the power of objects all along, but now it’s time to understand the mechanics of objects and start making your own!
+At their core, JavaScript objects act as containers that hold related data and functionality. Despite their seemingly simple nature, objects possess remarkable power in practice. You have already been harnessing the power of objects, but now it is time to understand their mechanics and create your own!
 
 ## Creating Object Literals
 Objects can be assigned to variables just like any JavaScript type. We use curly braces, `{}`, to designate an object literal:
@@ -62,9 +61,10 @@ The `spaceship` object has two properties `Fuel Type` and `color`. `'Fuel Type'`
 Open [./exercises/fasterSpaceship.js](./exercises/fasterSpaceship.js) and follow the instructions.
 
 ## Accessing Properties
-There are two ways we can access an object’s property. Let’s explore the first way— dot notation, `.`.
 
-You’ve used dot notation to access the properties and methods of built-in objects and data instances:
+There are two ways to access an object's property. Let's explore the first way: dot notation (`.`).
+
+You have already used dot notation to access properties and methods of built-in objects and data instances:
 
 ```js 'hello'.length; // Returns 5 ```
 With property dot notation, we write the object’s name, followed by the dot operator and then the property name (key):
@@ -90,9 +90,10 @@ Let’s get some more practice using dot notation on an object!
 Open [./exercises/countTheCrew.js](./exercises/countTheCrew.js) and follow the instructions.
 
 ## Bracket Notation
-The second way to access a key’s value is by using bracket notation, `[ ]`.
 
-You’ve used bracket notation when indexing an array:
+The second way to access a key's value is by using bracket notation (`[ ]`).
+
+You have already used bracket notation when indexing an array:
 
 ```js
 ['A', 'B', 'C'][0]; // Returns 'A'
@@ -128,18 +129,21 @@ If we tried to write our `returnAnyProp()` function with dot notation (objectNam
 Open [./exercises/secretMission.js](./exercises/secretMission.js) and follow the instructions.
 
 ## Property Assignment
-Once we’ve defined an object, we’re not stuck with all the properties we wrote. Objects are mutable meaning we can update them after we create them!
 
-We can use either dot notation, `.`, or bracket notation, `[]`, and the assignment operator, ` = ` to add new key-value pairs to an object or change an existing property.
+Once we've defined an object, we're not stuck with all the properties we initially wrote. Objects are mutable, which means we can update them after creating them.
+
+To add new key-value pairs to an object or change an existing property, we can use either dot notation (`.`) or bracket notation (`[]`) along with the assignment operator (`=`).
+Here's how we can perform property assignment:
+
 
 ![diagram showing how an object followed by brackets ([]) with the property name as a string can be reassigned to a new value. This same idea applies for accessing a property using dot notation which has the object name, followed by a dot and the name of the property](https://static-assets.codecademy.com/Courses/Learn-JavaScript/objects/object_property_assignment.svg)
 
 One of two things can happen with property assignment:
 
-* If the property already exists on the object, whatever value it held before will be replaced with the newly assigned value.
+* If the property already exists on the object, the new value will replace the old value.
 * If there was no property with that name, a new property will be added to the object.
 
-It’s important to know that although we can’t reassign an object declared with `const`, we can still mutate it, meaning we can add new properties and change the properties that are there.
+Please note that while we can't reassign an object declared with const, we can still mutate it by adding new properties or changing existing ones.
 
 ```js
 const spaceship = {type: 'shuttle'};
@@ -164,11 +168,14 @@ delete spaceship.mission;  // Removes the mission property
 Open [./exercises/spaceshipUpgrade.js](./exercises/spaceshipUpgrade.js) and follow the instructions.
 
 ## Methods
-When the data stored on an object is a function we call that a [method](https://www.codecademy.com/resources/docs/javascript/methods?page_ref=catalog). A property is what an object has, while a method is what an object does.
 
-Do object methods seem familiar? That’s because you’ve been using them all along! For example `console` is a global JavaScript object and `.log()` is a method on that object. `Math` is also a global JavaScript object and `.floor()` is a method on it.
+Methods in JavaScript refer to functions that are stored within objects. They define the actions that an object can perform. In contrast, properties represent the characteristics or data that an object possesses.
 
-We can include methods in our object literals by creating ordinary, colon-separated key-value pairs. The key serves as our method’s name, while the value is an anonymous function expression.
+You might already be familiar with object methods without realizing it. For example, the `console` object in JavaScript provides a method called `.log()` for printing messages to the console. Similarly, the `Math` object includes a method called `.floor()` for rounding numbers down to the nearest integer.
+
+To define methods in JavaScript objects, we use key-value pairs separated by colons. The key represents the name of the method, while the value is an anonymous function expression.
+
+By using methods, we can make objects in JavaScript more dynamic and functional. They allow objects to perform specific actions and provide a way to organize and encapsulate related functionality within the object itself.
 
 ```js
 const alienShip = {
@@ -196,9 +203,12 @@ alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Inst
 Open [./exercises/retreat.js](./exercises/retreat.js) and follow the instructions.
 
 ## Nested Objects
-In application code, objects are often nested— an object might have another object as a property which in turn could have a property that’s an array of even more objects!
 
-In our `spaceship` object, we want a `crew` object. This will contain all the crew members who do important work on the craft. Each of those `crew` members are objects themselves. They have properties like `name`, and `degree`, and they each have unique methods based on their roles. We can also nest other objects in the `spaceship` such as a `telescope` or nest details about the spaceship’s computers inside a parent `nanoelectronics` object.
+In programming, objects can be nested, which means that an object can have another object as one of its properties. This allows us to organize and structure our data hierarchically.
+
+For example, imagine a `spaceship` object. Inside this object, we can have a `crew` object that represents the crew members on the spaceship. Each crew member is an object with properties like `name` and `degree`. We can also nest other objects within the `spaceship`, such as a `telescope` object or details about the spaceship's computers in a `nanoelectronics` object.
+
+By nesting objects, we can create complex data structures that represent real-world scenarios and the relationships between different entities.
 
 ```js
 const spaceship = {
@@ -229,7 +239,11 @@ const spaceship = {
     }
 }; 
 ```
-We can chain operators to access nested properties. We’ll have to pay attention to which operator makes sense to use in each layer. It can be helpful to pretend you are the computer and evaluate each expression from left to right so that each operation starts to feel a little more manageable.
+## Chaining Operators to Access Nested Properties
+
+When working with nested objects, we can chain operators together to access properties at different levels. To do this, we need to choose the appropriate operator for each layer of the nested structure.
+
+To make it easier, imagine yourself as the computer and evaluate each expression from left to right. This approach helps break down the operations and make them more manageable.
 
 ```js
 spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium'
@@ -244,7 +258,9 @@ In the preceding code:
 Open [./exercises/onBoard.js](./exercises/onBoard.js) and follow the instructions.
 
 ## Pass By Reference
-Objects are *passed by reference*. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently (even when the object is assigned to a `const` variable).
+
+When working with objects in JavaScript, they are passed by reference. This means that when we pass an object variable as an argument to a function, the parameter name inside the function refers to the same object in memory. Consequently, any changes made to the object's properties within the function will permanently modify the original object, even if it is assigned to a `const` variable.
+
 
 ```js
 const spaceship = {
@@ -287,11 +303,12 @@ spaceship = {
 
 Let’s look at what happened in the code example:
 
-* We declared this spaceship object with let. This allowed us to reassign it to a new object with identified and 'transport type' properties with no problems.
-* When we tried the same thing using a function designed to reassign the object passed into it, the reassignment didn’t stick (even though calling console.log() on the object produced the expected result).
+- We declared a `spaceship` object using `let`. This allowed us to reassign it to a new object with properties like `identified` and `transport type` without any issues.
+- However, when we passed the `spaceship` object into a function designed to reassign the object, the reassignment didn't have any effect (even though printing the object using `console.log()` gave us the expected result).
 
-* When we passed spaceship into that function, obj became a reference to the memory location of the spaceship object, but not to the spaceship variable. This is because the obj parameter of the tryReassignment() function is a variable in its own right. The body of tryReassignment() has no knowledge of the spaceship variable at all!
-* When we did the reassignment in the body of tryReassignment(), the obj variable came to refer to the memory location of the object {'identified' : false, 'transport type' : 'flying'}, while the spaceship variable was completely unchanged from its earlier value.
+- The reason for this is that when we passed `spaceship` into the function, the function's parameter (`obj`) became a reference to the memory location of the `spaceship` object, not to the `spaceship` variable itself. The function has no knowledge of the `spaceship` variable.
+- So when we performed the reassignment inside the function, the `obj` variable started referring to a new object `{'identified': false, 'transport type': 'flying'}`, while the `spaceship` variable remained unchanged.
+
 
 ### Exercises
 Open [./exercises/energise.js](./exercises/energise.js) and follow the instructions.
