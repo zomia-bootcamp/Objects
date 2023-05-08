@@ -2,10 +2,10 @@
 
 ## Objectives
 
-- Model real-world entities.
-- Compare entity traits with entity behavior.
-- Implement these models with JavaScript objects.
+- Implement real-world entities models with JavaScript objects.
 - Contrast the definitions of "property" and "method".
+- Manipulate object propeties
+- Access objects by reference
 
 ## Preparation
 
