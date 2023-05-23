@@ -143,7 +143,7 @@ Open [./exercises/secretMission.js](./exercises/secretMission.js) and follow the
 
 Once we've defined an object, we're not stuck with all the properties we initially wrote. Objects are mutable, which means we can update them after creating them.
 
-To add new key-value pairs to an object or change an existing property, we can use either dot notation (`.`) or bracket notation (`[]`) along with the assignment operator (`=`).
+To add new key-value pair to an object or change an existing property, we can use either dot notation (`.`) or bracket notation (`[]`) along with the assignment operator (`=`).
 Here's how we can perform property assignment:
 
 
