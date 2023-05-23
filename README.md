@@ -99,7 +99,7 @@ The second way to access a key's value is by using bracket notation (`[ ]`).
 You have already used bracket notation when indexing an array:
 
 ```js
-const abs = ['A', 'B', 'C'; 
+const abc = ['A', 'B', 'C']; 
 
 console.log(abc[0]);
 
