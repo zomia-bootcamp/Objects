@@ -66,7 +66,10 @@ There are two ways to access an object's property. Let's explore the first way: 
 
 You have already used dot notation to access properties and methods of built-in objects and data instances:
 
-```js 'hello'.length; // Returns 5 ```
+```js 
+'hello'.length;
+```
+
 With property dot notation, we write the object’s name, followed by the dot operator and then the property name (key):
 
 ```js
@@ -74,15 +77,15 @@ let spaceship = {
   homePlanet: 'Earth',
   color: 'silver'
 };
-spaceship.homePlanet; // Returns 'Earth',
-spaceship.color; // Returns 'silver',
+spaceship.homePlanet; 
+spaceship.color; 
 ```
 ![dot notation](https://content.codecademy.com/courses/learn-javascript-objects/object%20dot%20notation.svg)
 
 If we try to access a property that does not exist on that object, `undefined` will be returned.
 
 ```js
-spaceship.favoriteIcecream; // Returns undefined
+spaceship.favoriteIcecream; 
 ```
 Let’s get some more practice using dot notation on an object!
 
@@ -96,7 +99,10 @@ The second way to access a key's value is by using bracket notation (`[ ]`).
 You have already used bracket notation when indexing an array:
 
 ```js
-['A', 'B', 'C'][0]; // Returns 'A'
+const abs = ['A', 'B', 'C'; 
+
+console.log(abc[0]);
+
 ```
 To use bracket notation to access an object’s property, we pass in the property name (key) as a string.
 
@@ -111,19 +117,24 @@ let spaceship = {
   homePlanet: 'Earth',
   numCrew: 5
 };
-spaceship['Active Duty'];   // Returns true
-spaceship['Fuel Type'];   // Returns  'Turbo Fuel'
-spaceship['numCrew'];   // Returns 5
-spaceship['!!!!!!!!!!!!!!!'];   // Returns undefined
+
+//try logging the following options to the console:
+
+spaceship['Active Duty'];  
+spaceship['Fuel Type']; 
+spaceship['numCrew'];  
+spaceship['!!!!!!!!!!!!!!!'];  
+spaceship.'Fuel Type';
+spaceship.Fuel Type;
 ```
 With bracket notation you can also use a variable inside the brackets to select the keys of an object. This can be especially helpful when working with functions:
 
 ``` js 
 let returnAnyProp = (objectName, propName) => objectName[propName]; 
  
-returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth'
+returnAnyProp(spaceship, 'homePlanet'); 
 ```
-If we tried to write our `returnAnyProp()` function with dot notation (objectName.propName) the computer would look for a #key# of `'propName'` on our object and not the #value# of the `propName` parameter.
+If we tried to write our `returnAnyProp()` function with dot notation (objectName.propName) the computer would look for a **key** of `'propName'` on our object and not the **value** of the `propName` parameter.
 
 ### Exercises
 Open [./exercises/secretMission.js](./exercises/secretMission.js) and follow the instructions.
@@ -147,9 +158,9 @@ Please note that while we can't reassign an object declared with const, we can s
 
 ```js
 const spaceship = {type: 'shuttle'};
-spaceship = {type: 'alien'}; // TypeError: Assignment to constant variable.
-spaceship.type = 'alien'; // Changes the value of the type property
-spaceship.speed = 'Mach 5'; // Creates a new key of 'speed' with a value of 'Mach 5'
+spaceship = {type: 'alien'}; 
+spaceship.type = 'alien'; 
+spaceship.speed = 'Mach 5';
 ```
 
 You can delete a property from an object with the `delete` operator.
@@ -161,7 +172,9 @@ const spaceship = {
   mission: 'Explore the universe' 
 };
  
-delete spaceship.mission;  // Removes the mission property
+delete spaceship.mission;  
+
+console.log(spaceship);
 ```
 
 ### Exercises
@@ -196,7 +209,7 @@ const alienShip = {
 Object methods are invoked by appending the object’s name with the dot operator followed by the method name and parentheses:
 
 ```js
-alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
+alienShip.invade();
 ```
 
 ### Exercises
@@ -246,7 +259,7 @@ When working with nested objects, we can chain operators together to access prop
 To make it easier, imagine yourself as the computer and evaluate each expression from left to right. This approach helps break down the operations and make them more manageable.
 
 ```js
-spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium'
+spaceship.nanoelectronics['back-up'].battery; 
 ```
 In the preceding code:
 
@@ -274,7 +287,7 @@ let paintIt = obj => {
  
 paintIt(spaceship);
  
-spaceship.color // Returns 'glorious gold'
+spaceship.color 
 ```
  
 Our function `paintIt()` permanently changed the color of our `spaceship` object. However, reassignment of the `spaceship` variable wouldn’t work in the same way:
@@ -289,16 +302,16 @@ let tryReassignment = obj => {
     identified : false, 
     'transport type' : 'flying'
   }
-  console.log(obj) // Prints {'identified': false, 'transport type': 'flying'}
+  console.log(obj)
  
 };
-tryReassignment(spaceship) // The attempt at reassignment does not work.
-spaceship // Still returns {homePlanet : 'Earth', color : 'red'};
+tryReassignment(spaceship) 
+spaceship 
  
 spaceship = {
   identified : false, 
   'transport type': 'flying'
-}; // Regular reassignment still works.
+};
 ```
 
 Let’s look at what happened in the code example:
