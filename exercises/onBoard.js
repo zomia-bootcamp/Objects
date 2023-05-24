@@ -28,7 +28,7 @@ let spaceship = {
   engine: {
     model: "Nimbus2000"
   },
-  nanoelectronics: {
+  nanoElectronics: {
     computer: {
       terabytes: 100,
       monitors: "HD"
