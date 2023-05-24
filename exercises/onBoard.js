@@ -12,7 +12,7 @@ Make sure to use bracket and dot notation to get the passenger object through ne
 
 
 let spaceship = {
-  passengers: [{name: "Dan"}],
+  passengers: null,
   telescope: {
     yearBuilt: 2018,
     model: "91031-XLT",
